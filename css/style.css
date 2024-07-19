@@ -1,0 +1,179 @@
+@font-face {
+    font-family: "Norse-Bold";
+    src: url('Norse Bold.otf') format("otf");
+}
+
+* {
+    /*CSS reset*/
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.main {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+
+/* Banner */
+.hero {
+    /*Place the banner vertically*/
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+
+    /*image to be used for the banner*/
+    background-image: url(../img/GreenLeaf.jpg);
+    width: 40vw;
+
+    /*Some adjustments for the positioning of the background image*/
+    background-position: center;
+    background-size: cover;
+
+    /*Some adjustments for the dark banner where odin logo will be held*/
+    padding-top: 160px;
+    min-width: 345px;
+
+    /* To position .hero p (photo credit) absolutely */
+    position: relative;
+
+    color: white;
+}
+
+.logoBar {
+    display: flex;
+
+    /*centers the odin logo and the text*/
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.logoBar img {
+    /* Adjusts the odin logo image */
+    width: 7rem; /* 16px x 7 = 112px */
+
+    /* Give some space between */
+    padding: 10px;
+}
+
+h1 {
+    /* Odin Logo text */
+    padding-top: 24px;
+    font-family: "Norse";
+    font-size: 80px;
+}
+
+.hero > p{
+    position: absolute;
+    bottom: 10px;
+    width: 100%; /* 50vw */
+    text-align: center;
+    font-size: 12px;
+    opacity: 0.8;
+}
+
+.hero a {
+    color: white;
+}
+
+.right {
+    /* Position the right side of the web using flexbox */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+
+    width: 100vw;
+    background-color: rgb(240, 240, 240);
+}
+
+.inputSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    background-color: white;
+    padding: 1.2rem 2vw 3rem 2vw;
+    box-shadow: 0 5px 5px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header p {
+    margin-bottom: 30px;
+}
+
+.header, .footer {
+    width: 100%;
+    padding: 1vh 2vw;
+}
+
+h3 {
+    margin-bottom: 16px;
+}
+
+form {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: space-bewteen;
+    gap: 1rem;
+    width: 100%;
+}
+
+label {
+    position: relative;
+    font-size: 0.7rem;
+    letter-spacing: 0.1rem;
+    width: 15rem;
+    margin-bottom: 15px;
+}
+
+input {
+    font-size: 1rem;
+    border: 1px solid #E5E7EB;
+    border-radius: 4px;
+    outline: none;
+    padding: 4px 8px;
+    margin-top: 4px;
+}
+
+input:invalid {
+    border-color: red;
+}
+
+input:valid {
+    border-color: green;
+}
+
+input:focus {
+    border-color: blue;
+    box-shadow: 1px 1px 1px 1px lightslategrey;
+}
+
+.footer > button {
+    /* Adjust the margin of the button */
+    margin: 20px 2rem;
+
+    /* Add some styles to the button */
+    background-color: #596D48;
+    border-style: none;
+    border-radius: 6px;
+    color: white;
+    box-shadow: 2px 2px 2px 1px rgb(0 0 0 / 20%);
+
+    /* Adjust the size of the button */
+    padding: 10px 20px;
+}
+
+.footer > p {
+    margin-left: 2rem;
+}
+
+p > a {
+    text-decoration: none;
+    color: green;
+}
